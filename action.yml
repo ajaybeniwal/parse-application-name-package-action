@@ -1,0 +1,8 @@
+name: 'Parse application name from the package.json'
+description: 'This is used to parse the application name from package.json'
+outputs:
+  product: # id of output
+    description: 'The name of the product'
+runs:
+  using: 'node12'
+  main: 'index.js'
