@@ -6,7 +6,8 @@ try {
   const package = path.join(root,'package.json');
   const data = JSON.parse(fs.readFileSync(package))
   const[product, mfename] = data.name.split("/");
-  core.setOutput("product", product);
+  core.setOutput("servicename", data.name);
+  core.setOutput("product", product.replace('@',''));
   core.setOutput("mfename", mfename);
 } catch (error) {
   core.setFailed(error.message);
